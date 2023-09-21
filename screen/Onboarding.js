@@ -61,7 +61,7 @@ const OnboardingScreen = () => {
                 />
               </View>
             ),
-            title: "This App For You",
+            title: "This App For Is You",
             subtitle: "Let's Get Started",
           },
         ]}
