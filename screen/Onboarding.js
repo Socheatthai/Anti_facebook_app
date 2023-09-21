@@ -37,7 +37,7 @@ const OnboardingScreen = () => {
                     justifyContent: "center",
                     bottom: 10,
                   }}
-                  source={require("../assets/on2.json")}
+                  source={require("../assets/on1.json")}
                 />
               </View>
             ),
@@ -57,7 +57,7 @@ const OnboardingScreen = () => {
                     alignItems: "center",
                     justifyContent: "center",
                   }}
-                  source={require("../assets/on4.json")}
+                  source={require("../assets/on2.json")}
                 />
               </View>
             ),

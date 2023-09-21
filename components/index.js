@@ -1,1 +1,2 @@
-export { default as CustomInput } from "./CustomInput";
+export { default } from "./CustomInput";
+export { default as Button } from "./CustomButton";
