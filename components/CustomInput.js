@@ -5,14 +5,14 @@ const CustomInput = (props) => {
     <TextInput
       {...props}
       style={{
-        borderRadius: 20,
+        borderRadius: 10,
         height: 50,
-        top: 40,
+        top: 30,
         alignItems: "center",
-        paddingHorizontal: 10,
+        paddingHorizontal: 15,
         width: "80%",
         backgroundColor: "white",
-        marginVertical: 10,
+        marginVertical: 15,
       }}
     ></TextInput>
   );

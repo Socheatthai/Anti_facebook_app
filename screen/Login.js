@@ -25,7 +25,8 @@ const Login = (props) => {
           top: 70,
           height: 490,
           width: 420,
-          borderTopRightRadius: 80,
+          borderTopRightRadius: 70,
+          borderTopLeftRadius: 70,
           backgroundColor: "#14527F",
           alignItems: "center",
         }}
@@ -39,7 +40,14 @@ const Login = (props) => {
             paddingVertical: 50,
           }}
         >
-          <Text style={{ fontSize: 17, color: "white", fontWeight: "bold" }}>
+          <Text
+            style={{
+              fontSize: 17,
+              color: "white",
+              fontWeight: "bold",
+              bottom: 20,
+            }}
+          >
             Forgot Password
           </Text>
         </View>
@@ -63,9 +71,7 @@ const Login = (props) => {
           >
             Don't Have An Account?
           </Text>
-          <TouchableOpacity
-            onPress={() => props.navigation.navigate("Register")}
-          >
+          <TouchableOpacity onPress={() => navigation.navigate("Register")}>
             <Text
               style={{
                 color: "white",
