@@ -45,7 +45,7 @@ const Login = (props) => {
           >
             <Text
               style={{
-                fontSize: 17,
+                fontSize: 18,
                 color: "white",
                 fontWeight: "bold",
                 bottom: 20,
@@ -68,7 +68,7 @@ const Login = (props) => {
         >
           <Text
             style={{
-              fontSize: 17,
+              fontSize: 18,
               fontWeight: "bold",
               color: "white",
             }}
@@ -80,7 +80,7 @@ const Login = (props) => {
               style={{
                 color: "white",
                 fontWeight: "bold",
-                fontSize: 17,
+                fontSize: 18,
                 left: 10,
               }}
             >

@@ -101,7 +101,7 @@ const Register = () => {
         >
           <Text
             style={{
-              fontSize: 17,
+              fontSize: 18,
               fontWeight: "bold",
               color: "white",
             }}
@@ -113,7 +113,7 @@ const Register = () => {
               style={{
                 color: "#AFAA1C",
                 fontWeight: "bold",
-                fontSize: 17,
+                fontSize: 18,
                 left: 10,
               }}
             >
