@@ -106,7 +106,7 @@ const Register = () => {
               color: "white",
             }}
           >
-            Have An Account?
+            Already Have An Account?
           </Text>
           <TouchableOpacity onPress={() => navigation.navigate("Login")}>
             <Text
