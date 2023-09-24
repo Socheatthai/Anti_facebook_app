@@ -40,16 +40,20 @@ const Login = (props) => {
             paddingVertical: 50,
           }}
         >
-          <Text
-            style={{
-              fontSize: 17,
-              color: "white",
-              fontWeight: "bold",
-              bottom: 20,
-            }}
+          <TouchableOpacity
+            onPress={() => navigation.navigate("ForgetPassword")}
           >
-            Forgot Password
-          </Text>
+            <Text
+              style={{
+                fontSize: 17,
+                color: "white",
+                fontWeight: "bold",
+                bottom: 20,
+              }}
+            >
+              Forgot Password
+            </Text>
+          </TouchableOpacity>
         </View>
         <View>
           <Button />
