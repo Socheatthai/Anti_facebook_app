@@ -18,7 +18,7 @@ const Register = () => {
         style={{
           bottom: 10,
           width: 200,
-          height: 200,
+          height: 250,
           alignItems: "center",
           justifyContent: "center",
         }}
@@ -46,17 +46,29 @@ const Register = () => {
           <Text style={styles.emailText}>Email</Text>
           <TextInput
             placeholder="Email"
+            keyboardType="email-address"
             style={{ width: "80%", alignItems: "center", top: 20 }}
           />
         </View>
         <View>
-          <Text style={{ fontSize: 20, color: "white", top: 35 }}>
+          <Text
+            style={{
+              fontSize: 20,
+              color: "white",
+              top: 35,
+              fontWeight: "bold",
+            }}
+          >
             Password
           </Text>
           <TextInput
             placeholder="Password"
             secureTextEntry={isPasswordShown}
-            style={{ width: "80%", alignItems: "center", top: 40 }}
+            style={{
+              width: "80%",
+              alignItems: "center",
+              top: 40,
+            }}
           />
           <TouchableOpacity
             onPress={() => setIsPasswordShown(!isPasswordShown)}
@@ -76,12 +88,12 @@ const Register = () => {
             paddingVertical: 50,
           }}
         ></View>
-        <View>
+        <View style={{ top: 30 }}>
           <SignUpButton />
         </View>
         <View
           style={{
-            top: 30,
+            top: 50,
             display: "flex",
             flexDirection: "row",
             justifyContent: "center",
@@ -123,13 +135,13 @@ const styles = StyleSheet.create({
   },
   usernameText: {
     fontSize: 20,
-    fontWeight: 700,
+    fontWeight: "bold",
     color: "white",
     bottom: 5,
   },
   emailText: {
     fontSize: 20,
-    fontWeight: 700,
+    fontWeight: "bold",
     color: "white",
     top: 15,
   },
