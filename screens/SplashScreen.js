@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
-import image from "../assets/splash1.png";
+import image from "../assets/splash4.png";
 import { SignUpBtn } from "../components";
 import { LoginBtn } from "../components";
 
@@ -8,38 +8,45 @@ const SplashScreen = () => {
   return (
     <View style={styles.container}>
       <Image source={image} style={styles.image} />
-      <View style={{ top: 20, alignItems: "center" }}>
-        <Text style={{ fontSize: 25, fontWeight: "bold" }}>
+      <View style={{ top: 40, alignItems: "center", padding: 10 }}>
+        <Text style={{ fontSize: 26, fontWeight: "bold" }}>
           Welcome To Anti Facebook
         </Text>
-        <Text style={{ fontSize: 18, fontWeight: "bold", top: 5 }}>
+        <Text style={{ fontSize: 18, fontWeight: 600, top: 5 }}>
           Share, Comment and Discover
         </Text>
-        <Text style={{ fontSize: 18, fontWeight: "bold", top: 5 }}>
+        <Text style={{ fontSize: 18, fontWeight: 600, top: 5 }}>
           Let's Join With Us
         </Text>
       </View>
       <View style={{ alignItems: "center", top: 20 }}>
-        <Text style={{ fontSize: 20, fontWeight: "bold", top: 120 }}>
+        <Text style={{ fontSize: 18, fontWeight: "bold", top: 120 }}>
           Create Your Account Here
         </Text>
         <SignUpBtn />
       </View>
-      <View style={{ top: 200 }}>
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>OR</Text>
+      <View style={{ top: 180 }}>
+        <Text style={{ fontSize: 18, fontWeight: "bold" }}>OR</Text>
       </View>
       <View
         style={{
           display: "flex",
           flexDirection: "row",
-          top: 240,
+          top: 200,
         }}
       >
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+        <Text style={{ fontSize: 18, fontWeight: "bold" }}>
           Already Have An Account?
         </Text>
         <TouchableOpacity>
-          <Text style={{ fontSize: 20, fontWeight: "bold", left: 10 }}>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: "bold",
+              left: 10,
+              color: "#3768D2",
+            }}
+          >
             Login
           </Text>
         </TouchableOpacity>
@@ -57,7 +64,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 250,
-    height: 200,
+    height: 300,
     top: 20,
   },
 });

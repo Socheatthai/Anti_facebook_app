@@ -14,9 +14,9 @@ const SignUpBtn = () => {
 const styles = StyleSheet.create({
   container: {
     width: 300,
-    backgroundColor: "#093C55",
+    backgroundColor: "#3768D2",
     alignItems: "center",
-    padding: 10,
+    padding: 15,
     borderRadius: 10,
     top: 130,
   },
