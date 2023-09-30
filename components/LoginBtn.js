@@ -1,25 +1,24 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-const LoginBtn = () => {
+const LoginBtn = ({ title, onPress = () => {} }) => {
   return (
-    <View style={styles.container}>
-      <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
-        Login
+    <TouchableOpacity
+      onPress={onPress}
+      style={{
+        height: 55,
+        width: "auto",
+        backgroundColor: "#3768D2",
+        justifyContent: "center",
+        alignItems: "center",
+        top: 30,
+        borderRadius: 5,
+      }}
+    >
+      <Text style={{ fontSize: 20, fontWeight: "bold", color: "white" }}>
+        {title}
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    width: 300,
-    backgroundColor: "#093C55",
-    alignItems: "center",
-    padding: 10,
-    borderRadius: 10,
-    top: 200,
-  },
-});
-
 export default LoginBtn;

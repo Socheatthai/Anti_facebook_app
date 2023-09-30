@@ -1,10 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  BackHandler,
+} from "react-native";
 import image from "../assets/splash4.png";
 import { SignUpBtn } from "../components";
-import { LoginBtn } from "../components";
+import { useNavigation } from "@react-navigation/native";
 
 const SplashScreen = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Image source={image} style={styles.image} />
@@ -16,14 +24,16 @@ const SplashScreen = () => {
           Share, Comment and Discover
         </Text>
         <Text style={{ fontSize: 18, fontWeight: 600, top: 5 }}>
-          Let's Join With Us
+          Let's Join With Us!
         </Text>
       </View>
       <View style={{ alignItems: "center", top: 20 }}>
         <Text style={{ fontSize: 18, fontWeight: "bold", top: 120 }}>
           Create Your Account Here
         </Text>
-        <SignUpBtn />
+        <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
+          <SignUpBtn />
+        </TouchableOpacity>
       </View>
       <View style={{ top: 180 }}>
         <Text style={{ fontSize: 18, fontWeight: "bold" }}>OR</Text>
@@ -38,12 +48,12 @@ const SplashScreen = () => {
         <Text style={{ fontSize: 18, fontWeight: "bold" }}>
           Already Have An Account?
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Login")}>
           <Text
             style={{
               fontSize: 18,
               fontWeight: "bold",
-              left: 10,
+              left: 6,
               color: "#3768D2",
             }}
           >

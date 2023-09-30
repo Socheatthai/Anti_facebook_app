@@ -1,2 +1,3 @@
 export { default as SignUpBtn } from "./SignUpBtn";
-export { default as LoginBtn } from "./LoginBtn";
+export { default as LogInBtn } from "./LoginBtn";
+export { default as Input } from "./Input";

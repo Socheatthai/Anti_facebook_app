@@ -3,7 +3,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SplashScreen from "./screens/SplashScreen";
 import LoginScreen from "./screens/LoginScreen";
 import HomeScreen from "./screens/HomeScreen";
-
+import SignUpScreen from "./screens/SignUpScreen";
+import ForgotPassword from "./screens/ForgotPassword";
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
@@ -13,7 +14,21 @@ const Navigation = () => {
     return (
       <Stack.Navigator>
         <Stack.Screen name="Splash" component={SplashScreen} />
-        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen
+          name="SignUp"
+          component={SignUpScreen}
+          options={{ headerBackTitle: "Back" }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerBackTitle: "Back" }}
+        />
+        <Stack.Screen
+          name="ForgotPassword"
+          component={ForgotPassword}
+          options={{ headerBackTitle: "Back" }}
+        />
       </Stack.Navigator>
     );
   }
