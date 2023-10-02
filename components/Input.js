@@ -1,5 +1,12 @@
-import React from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  KeyboardAvoidingView,
+  Platform,
+} from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const Input = ({
@@ -10,8 +17,8 @@ const Input = ({
   onFocus = () => {},
   ...props
 }) => {
-  const [isFocus, setIsFocus] = React.useState(false);
-  const [hidePassword, setHidePassword] = React.useState(password);
+  const [isFocus, setIsFocus] = useState(false);
+  const [hidePassword, setHidePassword] = useState(password);
   return (
     <View style={{ marginBottom: 20 }}>
       <Text style={styles.label}>{label}</Text>
@@ -19,7 +26,7 @@ const Input = ({
         style={[
           styles.InputContainer,
           {
-            borderColor: error ? "#F86D6D" : isFocus ? "#1A4459" : "#C8E1EE",
+            borderColor: error ? "red" : isFocus ? "#292D9A" : "#C8E1EE",
           },
         ]}
       >
@@ -52,7 +59,7 @@ const Input = ({
       </View>
 
       {error && (
-        <Text style={{ color: "red", fontSize: 14, marginTop: 10 }}>
+        <Text style={{ color: "red", fontSize: 14, marginTop: 7 }}>
           {error}
         </Text>
       )}
@@ -64,6 +71,7 @@ const styles = StyleSheet.create({
   label: {
     marginVertical: 5,
     fontSize: 18,
+    color: "#296D8E",
   },
   InputContainer: {
     width: 340,

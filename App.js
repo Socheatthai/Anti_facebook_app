@@ -5,6 +5,7 @@ import LoginScreen from "./screens/LoginScreen";
 import HomeScreen from "./screens/HomeScreen";
 import SignUpScreen from "./screens/SignUpScreen";
 import ForgotPassword from "./screens/ForgotPassword";
+import BirthdayScreen from "./screens/BirthdayScreen";
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
@@ -19,6 +20,11 @@ const Navigation = () => {
           component={SignUpScreen}
           options={{ headerBackTitle: "Back" }}
         />
+        {/* <Stack.Screen
+          name="PickBirthDay"
+          component={BirthdayScreen}
+          options={{ headerBackTitle: "Back" }}
+        /> */}
         <Stack.Screen
           name="Login"
           component={LoginScreen}
