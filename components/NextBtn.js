@@ -7,14 +7,15 @@ const NextBtn = ({ title, onPress = () => {} }) => {
   return (
     <TouchableOpacity
       activeOpacity={0.7}
-      onPress={onPress}
+      onPress={() => navigation.navigate("OTP")}
+      // onPress={onPress}
       style={{
         height: 55,
         width: "auto",
         backgroundColor: "#3768D2",
         justifyContent: "center",
         alignItems: "center",
-        top: 70,
+        marginTop: 90,
         borderRadius: 5,
       }}
     >

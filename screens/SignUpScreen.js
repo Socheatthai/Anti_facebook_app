@@ -100,8 +100,19 @@ const SignUpScreen = () => {
         keyboardVerticalOffset={20}
       >
         <ScrollView contentContainerStyle={{ alignItems: "center" }}>
-          <Image source={SignUpImage} style={styles.image} />
-          <View style={{ marginVertical: 20, bottom: 40 }}>
+          {/* <Image source={SignUpImage} style={styles.image} /> */}
+          <Text
+            style={{
+              fontSize: 25,
+              textAlign: "center",
+              fontWeight: "bold",
+              marginTop: 50,
+              color: "#38C0C2",
+            }}
+          >
+            Create Your Account Here
+          </Text>
+          <View style={{ marginVertical: 20, top: 20 }}>
             <Input
               onChangeText={(text) => handleOnChange(text, "username")}
               onFocus={() => handleError(null, "username")}
@@ -161,17 +172,17 @@ const SignUpScreen = () => {
                     ]}
                     onPress={toggleDatepicker}
                   >
-                    <Text>Cancel</Text>
+                    <Text style={{ fontWeight: "bold" }}>Cancel</Text>
                   </TouchableOpacity>
                   <TouchableOpacity
                     style={[
                       styles.button,
                       styles.pickerButton,
-                      { backgroundColor: "#86C0C7" },
+                      { backgroundColor: "#10E8A2" },
                     ]}
                     onPress={confirmIOSDate}
                   >
-                    <Text>Confirm</Text>
+                    <Text style={{ fontWeight: "bold" }}>Confirm</Text>
                   </TouchableOpacity>
                 </View>
               )}
@@ -188,7 +199,7 @@ const SignUpScreen = () => {
               )}
             </View>
 
-            <NextBtn title="Next" />
+            <NextBtn title="Next" onPress={validate} />
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -198,14 +209,14 @@ const SignUpScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: "#F8F8F8",
     flex: 1,
     alignItems: "center",
   },
-  image: {
-    width: 250,
-    height: 200,
-  },
+  // image: {
+  //   width: 250,
+  //   height: 200,
+  // },
   touchOp: {
     borderWidth: 0.5,
     borderRadius: 5,
@@ -253,16 +264,17 @@ const styles = StyleSheet.create({
   },
   datepicker: {
     height: 130,
-    marginTop: 10,
+    marginTop: 30,
   },
   button: {
     height: 50,
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 5,
+    marginTop: 20,
   },
   pickerButton: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 30,
   },
 });
 

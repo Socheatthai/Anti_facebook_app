@@ -74,17 +74,30 @@ const LoginScreen = () => {
               Forgot Password
             </Text>
             <LogInBtn title="Login" onPress={validate} />
-            <Text
-              onPress={() => navigation.navigate("SignUp")}
+            <View
               style={{
-                textAlign: "center",
-                fontSize: 17,
-                fontWeight: "bold",
-                paddingTop: 60,
+                display: "flex",
+                flexDirection: "row",
+                marginTop: 50,
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              Don't Have An Account? Sign Up
-            </Text>
+              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                Don't Have An Account?
+              </Text>
+              <Text
+                onPress={() => navigation.navigate("SignUp")}
+                style={{
+                  fontSize: 18,
+                  marginLeft: 10,
+                  fontWeight: "bold",
+                  color: "#3768D2",
+                }}
+              >
+                SignUp
+              </Text>
+            </View>
           </View>
         </KeyboardAvoidingView>
       </ScrollView>
