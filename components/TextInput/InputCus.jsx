@@ -12,6 +12,7 @@ const InputCus = ({
   value,
   onChangeText,
   secureTextEntry,
+  placeholder,
 }) => {
   return (
     <View style={styles.container(marginH, marginB, width)}>
@@ -21,6 +22,7 @@ const InputCus = ({
         value={value}
         onChangeText={onChangeText}
         secureTextEntry={secureTextEntry}
+        placeholder={placeholder}
       />
     </View>
   );

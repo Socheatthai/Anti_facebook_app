@@ -28,7 +28,7 @@ const OnBoarding = ({ navigation }) => {
           Connect with friends, discover new communities, and share your life
           with others.
         </Text>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           onPress={() => {
             navigation.navigate("Login", { username: "BrakLihou" });
           }}
@@ -42,7 +42,7 @@ const OnBoarding = ({ navigation }) => {
               <Ionicons name="menu-outline" size={24} color="black" />
             </TouchableOpacity>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <View style={styles.registerBtn}>
           <View style={styles.buttonRow}>
             <View>

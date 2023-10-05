@@ -12,8 +12,11 @@ import {
   OTP,
   Success,
   Home,
+  Avatar,
 } from "./screens";
+
 const Stack = createNativeStackNavigator();
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     Regular: require("./assets/fonts/Gilroy-Regular.otf"),
@@ -34,7 +37,15 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        initialRouteName="OnBording"
+        screenOptions={{
+          headerTitleStyle: {
+            fontFamily: "Bold",
+            fontSize: 18,
+          },
+        }}
+      >
         <Stack.Screen
           name="OnBording"
           component={OnBording}
@@ -48,31 +59,36 @@ export default function App() {
         <Stack.Screen
           name="NameUser"
           component={NameUser}
-          options={{ title: "Create an account" }}
+          options={{ title: "Create an Account" }}
         />
         <Stack.Screen
           name="DateOfBirth"
           component={DateOfBirth}
-          options={{ title: "Create an account" }}
+          options={{ title: "Create an Account" }}
         />
         <Stack.Screen
           name="Email"
           component={Email}
-          options={{ title: "Create an account" }}
+          options={{ title: "Create an Account" }}
         />
         <Stack.Screen
           name="OTP"
           component={OTP}
-          options={{ title: "Create an account" }}
+          options={{ title: "Create an Account" }}
         />
         <Stack.Screen
           name="Success"
           component={Success}
-          options={{ title: "Create an account" }}
+          options={{ title: "Create an Account" }}
         />
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Avatar"
+          component={Avatar}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

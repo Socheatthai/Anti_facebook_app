@@ -1,36 +1,72 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { ButtonCus, InputCus } from "../../components";
 import { SIZES } from "../../constants/theme";
 import avatar from "../../assets/images/avatarfacebook.jpg";
+
 const Login = ({ route, navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const { username } = route.params;
 
-  const handleLogin = () => {
-    console.log("Email:", email);
-    console.log("Password:", password);
+  const handleLogin = async () => {
+    try {
+      // await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      if (password === "12345") {
+        console.log("Login successful");
+        navigation.navigate("Avatar");
+      } else {
+        Alert.alert("Login Error", "Incorrect password");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      Alert.alert("Login Error", "An error occurred while logging in.");
+    }
   };
 
   return (
     <SafeAreaView style={styles.container}>
       {username ? (
         <View>
-          <View>
+          <View style={{ alignItems: "center" }}>
             <Image source={avatar} style={styles.avatar} />
-            <InputCus
-              labelName="Your Password"
-              borderBColor="#e9eaec"
-              marginB={20}
-              borderB={1}
-              onChangeText={(pass) => setPassword(pass)}
-              value={password}
-              secureTextEntry={!showPassword}
-            />
+            <Text style={{ marginTop: 10, fontFamily: "Medium" }}>
+              Brak Lihou
+            </Text>
+            <View style={styles.passwordInputContainer}>
+              <InputCus
+                placeholder={"Your password"}
+                borderBColor="#e9eaec"
+                marginB={20}
+                border={1}
+                width={300}
+                onChangeText={(pass) => setPassword(pass)}
+                value={password}
+                secureTextEntry={!showPassword}
+              />
+              <TouchableOpacity
+                style={styles.showHidePasswordButton}
+                onPress={() => setShowPassword(!showPassword)}
+              >
+                <Ionicons
+                  name={showPassword ? "eye-off-outline" : "eye-outline"}
+                  size={24}
+                  color="#000"
+                />
+              </TouchableOpacity>
+            </View>
+
             <ButtonCus
               onPress={handleLogin}
               btnText="Login"
@@ -43,6 +79,13 @@ const Login = ({ route, navigation }) => {
               icon={null}
               btnColor="#FFFFFF"
             />
+            <TouchableOpacity>
+              <Text
+                style={{ marginTop: 30, fontFamily: "Bold", color: "#007BFF" }}
+              >
+                Forget Password ?
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       ) : (
@@ -92,6 +135,13 @@ const Login = ({ route, navigation }) => {
             icon={null}
             btnColor="#FFFFFF"
           />
+          <TouchableOpacity>
+            <Text
+              style={{ marginTop: 30, fontFamily: "Bold", color: "#007BFF" }}
+            >
+              Forget Password ?
+            </Text>
+          </TouchableOpacity>
         </>
       )}
     </SafeAreaView>
